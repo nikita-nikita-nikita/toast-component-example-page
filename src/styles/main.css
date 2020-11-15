@@ -34,10 +34,13 @@ input, select{
   width: 100px;
   border-radius: 5px;
   display: inline-block;
+  margin: 0 5px;
 }:focus{
   outline: none;
  }
-.status, .duration{
+.status, .duration, .title, .close-onclick{
+  display: flex;
+  align-items: center;
   width: auto;
   height: 80px;
 }

@@ -1,6 +1,6 @@
 import "nikita-toast-component/src/styles/index.css";
 import "./styles/main.css";
-import {generateManagerWithContent} from "nikita-toast-component";
+import {generateManagerWithContent, generateManager, createToastElement} from "nikita-toast-component";
 
 const manger = generateManagerWithContent("Hello, that's example page, enjoy", {
     title: 'im title',
@@ -31,4 +31,9 @@ document.querySelector('#set-duration')
 document.querySelector('#status-select')
     .addEventListener('change', ({target}) => {
     manger.options.status = target.value
-} )
+});
+
+document.querySelector("#close-checkbox")
+    .addEventListener("input", e => {
+        manger.options.closeOnClick = e.target.checked;
+    })
