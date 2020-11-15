@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toast Example</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="main-container">
+    <div class="top-right-example">
+
+    </div>
+    <div class="controls">
+        <div class="status">
+            <label for="status-select">Status:</label>
+            <select name="s" id="status-select">
+                <option value="">default</option>
+                <option value="error" selected>error</option>
+                <option value="info">info</option>
+                <option value="warning">warning</option>
+                <option value="success">success</option>
+            </select>
+        </div>
+        <div class="duration">
+            <label for="duration-input">Auto close duration (ms) : </label>
+            <input id="duration-input" type="number" min="0" max="100000" step="100" value="0">
+            <button class="button" id="set-duration">Set</button>
+        </div>
+        <div class="duration">
+            <label for="title-input">title : </label>
+            <input id="title-input" type="text" value="im title">
+            <button class="button" id="set-title">Set</button>
+        </div>
+        <form class="message">
+            <label for="new-toast-message">Message: </label><input type="text" required id="new-toast-message" name="message">
+            <button class="button" type="submit">Create toast</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>
